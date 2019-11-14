@@ -13,7 +13,7 @@ function FormUser() {
     try {
       const response = await axios.post( "https://app-bobatron.herokuapp.com/novo-funcionario", {
         nome: nome,
-        matricula: Math.random() * 10,
+        matricula: Math.floor(Math.random() * 100),
         email: email,
         endereco: endereco,
         dataNasc: nasc,
