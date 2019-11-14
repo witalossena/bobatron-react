@@ -7,6 +7,7 @@ import Container from 'react-bootstrap/Container';
 import Estoque from "./components/estoque";
 import Funcionario from "./components/funcionarios";
 import Home from "./components/home";
+import "./App.css";
 
 import {
   BrowserRouter as Router,
@@ -15,13 +16,9 @@ import {
   Link
 } from "react-router-dom";
 
-
-
-
-
 function App() {
   return (
-    <Container className="text-center">
+    <Container>
       <Router>
       <div>
         <nav>
