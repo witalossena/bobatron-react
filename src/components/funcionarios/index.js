@@ -1,6 +1,9 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import FormUser from "./form";
+import Progress from "react-progress-2";
+
+
 
 
 import { Container, Table, Button, Row, Col } from "react-bootstrap";
@@ -18,6 +21,8 @@ function Funcionario() {
       );
       setFuncionario(response.data);
       setResp(response.data);
+      Progress.show();
+
     } catch (error) {}
   }
 
@@ -36,9 +41,11 @@ function Funcionario() {
 
   return (
     <Container>
+      <Progress.Component />
+      
       <Row>
         <Col md={12}>
-          <FormUser />             
+          <FormUser />                     
         </Col>
         <Col md={12}>
           <Table striped bordered hover>
