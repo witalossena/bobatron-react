@@ -1,9 +1,11 @@
 import React from 'react';
+import EstoqueForm from './estoqueForm';
 
 
 function Estoque() {
     return (
-        <h1>componente estoque</h1>
+        <EstoqueForm />
+       
     );
 }
 export default Estoque;

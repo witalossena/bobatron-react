@@ -1,9 +1,6 @@
 import React from "react";
 import { Container, Navbar, Nav } from "react-bootstrap";
-// import Row from 'react-bootstrap/Row';
-// import Col from 'react-bootstrap/Col';
-// import Card from 'react-bootstrap/Card';
-// import Button from 'react-bootstrap/Button';
+
 import Estoque from "./components/estoque";
 import Funcionario from "./components/funcionarios";
 import Home from "./components/home";
@@ -13,29 +10,35 @@ import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function App() {
   return (
-    <Container>
-      <Router>
+    <Router>
+      <Container>
         <Navbar bg="dark" variant="dark">
           <Navbar.Brand href="#home">Bobatron</Navbar.Brand>
           <Nav className="mr-auto">
-            <Nav.Link><Link to="/">Home</Link></Nav.Link>
-            <Nav.Link><Link to="/estoque">estoque</Link></Nav.Link>
-            <Nav.Link><Link to="/funcionarios">Funcionarios</Link></Nav.Link>
-          </Nav>      
-        </Navbar>  
-          <Switch>
-            <Route exact path="/">
-              <Home />
-            </Route>
-            <Route path="/estoque">
-              <Estoque />
-            </Route>
-            <Route path="/funcionarios">
-              <Funcionario />
-            </Route>
-          </Switch>
-      </Router>
-    </Container>
+            <div className="p-3">
+              <Link to="/">Home</Link>
+            </div>
+            <div className="p-3">
+              <Link to="/estoque">estoque</Link>
+            </div>
+            <div className="p-3">
+              <Link to="/funcionarios">Funcionarios</Link>
+            </div>
+          </Nav>
+        </Navbar>
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
+          <Route path="/estoque">
+            <Estoque />
+          </Route>
+          <Route path="/funcionarios">
+            <Funcionario />
+          </Route>
+        </Switch>
+      </Container>
+    </Router>
   );
 }
 

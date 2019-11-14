@@ -33,7 +33,7 @@ function FormUser() {
   }
 
   return (
-    <Form className="pb" onSubmit={sendData}>
+    <Form className="pb pt-5" onSubmit={sendData}>
       <Form.Row className="justify-content-left">
         <Form.Group as={Col} controlId="formName">
           <Form.Label>Nome</Form.Label>

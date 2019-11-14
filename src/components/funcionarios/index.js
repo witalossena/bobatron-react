@@ -5,7 +5,7 @@ import FormUser from "./form";
 
 import { Container, Table, Button, Row, Col } from "react-bootstrap";
 
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function Funcionario() {
   const [funcionario, setFuncionario] = useState([]);
