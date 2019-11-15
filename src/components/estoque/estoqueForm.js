@@ -10,7 +10,7 @@ function EstoqueForm() {
 
   async function sendData() {
     try {
-      const response = await axios.post(
+        await axios.post(
         "https://app-bobatron.herokuapp.com/adiciona-estoque",
         {
           cod: Math.floor(Math.random() * 100),
@@ -19,19 +19,11 @@ function EstoqueForm() {
           quantidade: quantidade,
           valor: valor,
         }
-      );
-    //   Getdata();
+      );   
     } catch (error) {
       console.error(error);
     }
   }
-
-//   async function Getdata() {
-//     try {
-//       await axios.get("https://app-bobatron.herokuapp.com/estoque");
-//     } catch (error) {}
-//   }
-
   return (
     <Container>
       <Row>

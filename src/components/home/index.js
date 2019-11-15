@@ -4,7 +4,6 @@ import axios from "axios";
 
 function Home() {
   const [estoque, setEstoque] = useState([]);
-  const [resp, setResp] = useState();
 
   async function Getestoque() {
     try {
@@ -12,7 +11,6 @@ function Home() {
         "https://app-bobatron.herokuapp.com/estoque"
       );
       setEstoque(response.data);
-      setResp(response.data);
     } catch (error) {
       console.error(error);
     }
@@ -26,10 +24,8 @@ function Home() {
     <Container>
       <Row >
         {estoque.map(item => (
-          <Col sm={6} md={3} className='p-0'>
-            <Card
-              key={item._id}
-              style={{ width: "12rem" }}
+          <Col key={item._id} sm={6} md={3} className='p-0'>
+            <Card  style={{ width: "12rem" }}
               className="mr-2 mb-2 mt-2" >
               {/* <Card.Img variant="top" src="holder.js/100px180" /> */}
               <Card.Body>

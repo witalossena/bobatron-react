@@ -12,8 +12,8 @@ function App() {
   return (
     <Router>
       <Container>
-        <Navbar bg="dark" variant="dark">
-          <Navbar.Brand href="#home">Bobatron Cd's</Navbar.Brand>
+        <Navbar variant="light">
+          <Navbar.Brand ><Link to="/">Bobatron</Link></Navbar.Brand>
           <Nav className="mr-auto">
             <div className="p-3">
               <Link to="/">Home</Link>

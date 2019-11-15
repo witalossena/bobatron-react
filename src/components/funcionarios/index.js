@@ -1,29 +1,25 @@
 import React, { useEffect, useState } from "react";
 import axios from "axios";
 import FormUser from "./form";
-import Progress from "react-progress-2";
 
 
 
 
 import { Container, Table, Button, Row, Col } from "react-bootstrap";
 
-// import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 
 function Funcionario() {
   const [funcionario, setFuncionario] = useState([]);
-  const [resp, setResp] = useState();
 
   async function Getdata() {
     try {
       const response = await axios.get(
         "https://app-bobatron.herokuapp.com/funcionarios"
       );
-      setFuncionario(response.data);
-      setResp(response.data);
-      Progress.show();
-
-    } catch (error) {}
+      setFuncionario(response.data);  
+    } catch (error) {
+      console.error(error)
+    }
   }
 
   useEffect(() => {
@@ -40,9 +36,7 @@ function Funcionario() {
   }
 
   return (
-    <Container>
-      <Progress.Component />
-      
+    <Container>      
       <Row>
         <Col md={12}>
           <FormUser />                     

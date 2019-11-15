@@ -11,7 +11,7 @@ function FormUser() {
 
   async function sendData() {
     try {
-      const response = await axios.post( "https://app-bobatron.herokuapp.com/novo-funcionario", {
+        await axios.post( "https://app-bobatron.herokuapp.com/novo-funcionario", {
         nome: nome,
         matricula: Math.floor(Math.random() * 100),
         email: email,
@@ -73,8 +73,7 @@ function FormUser() {
             as="select"
             value={cargo}
             onChange={e => setCargo(e.target.value)}
-            required
-          >
+            required  >
             <option></option>
             <option>Gerente</option>
             <option>Vendedor</option>
