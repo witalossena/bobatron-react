@@ -13,7 +13,7 @@ function App() {
     <Router>
       <Container>
         <Navbar bg="dark" variant="dark">
-          <Navbar.Brand href="#home">Bobatron</Navbar.Brand>
+          <Navbar.Brand href="#home">Bobatron Cd's</Navbar.Brand>
           <Nav className="mr-auto">
             <div className="p-3">
               <Link to="/">Home</Link>
