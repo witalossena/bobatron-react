@@ -41,7 +41,7 @@ function Funcionario() {
         <Col md={12}>
           <FormUser />                     
         </Col>
-        <Col md={12}>
+        <Col xs={6} sm={12} md={12}>
           <Table striped bordered hover>
             <thead>
               <tr>

@@ -58,7 +58,7 @@ function EstoqueForm() {
                 <Form.Label>Valor</Form.Label>
                 <Col md="3 p-0">
                   <Form.Control
-                    type="text"
+                    type="number"
                     value={valor}
                     onChange={e => setValor(e.target.value)}
                     required
@@ -71,7 +71,7 @@ function EstoqueForm() {
                 <Form.Label>Quantidade</Form.Label>
                 <Col md="3 p-0">
                   <Form.Control
-                    type="text"
+                    type="number"
                     value={quantidade}
                     onChange={e => setQuantidade(e.target.value)}
                     required
